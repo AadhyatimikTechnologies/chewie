@@ -514,7 +514,7 @@ class _CupertinoControlsState extends State<CupertinoControls> {
       } else {
         _cancelAndRestartTimer();
 
-        if (!controller.value.initialized) {
+      /*  if (!controller.value.initialized) {
           controller.initialize().then((_) {
             controller.play();
           });
@@ -523,7 +523,7 @@ class _CupertinoControlsState extends State<CupertinoControls> {
             controller.seekTo(Duration(seconds: 0));
           }
           controller.play();
-        }
+        }*/
       }
     });
   }
