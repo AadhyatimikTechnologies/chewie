@@ -73,9 +73,9 @@ class _VideoProgressBarState extends State<MaterialVideoProgressBar> {
         ),
       ),
       onHorizontalDragStart: (DragStartDetails details) {
-        if (!controller.value.initialized) {
+       /* if (!controller.value.initialized) {
           return;
-        }
+        }*/
         _controllerWasPlaying = controller.value.isPlaying;
         if (_controllerWasPlaying) {
           controller.pause();
@@ -86,9 +86,9 @@ class _VideoProgressBarState extends State<MaterialVideoProgressBar> {
         }
       },
       onHorizontalDragUpdate: (DragUpdateDetails details) {
-        if (!controller.value.initialized) {
+       /* if (!controller.value.initialized) {
           return;
-        }
+        }*/
         seekToRelativePosition(details.globalPosition);
 
         if (widget.onDragUpdate != null) {
@@ -105,9 +105,9 @@ class _VideoProgressBarState extends State<MaterialVideoProgressBar> {
         }
       },
       onTapDown: (TapDownDetails details) {
-        if (!controller.value.initialized) {
+       /* if (!controller.value.initialized) {
           return;
-        }
+        }*/
         seekToRelativePosition(details.globalPosition);
       },
     );
@@ -139,9 +139,9 @@ class _ProgressBarPainter extends CustomPainter {
       ),
       colors.backgroundPaint,
     );
-    if (!value.initialized) {
+   /* if (!value.initialized) {
       return;
-    }
+    }*/
     final double playedPartPercent =
         value.position.inMilliseconds / value.duration.inMilliseconds;
     final double playedPart =
